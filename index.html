@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Xpress Memberships Guide</title>
+<meta name="description" content="A plain-language guide for the Xpress-Yourself team to the new membership system.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+<style>
+/* One calm reading column with large type for older readers, in the plugin's WordPress blue with the guide's pink highlights. */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --ink: #1d2327; --muted: #50575e; --line: #dcdcde;
+  --blue: #2271b1; --blue-soft: #e8f1fa; --pink: #e2266f; --good: #00753a; --good-soft: #e5f4ea;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #15191d; --surface: #1f252b; --ink: #eef1f4; --muted: #a7b0b9; --line: #343c44;
+  --blue: #72aee6; --blue-soft: #1d3247; --pink: #f25b95; --good: #68de9b; --good-soft: #17352a; color-scheme: dark; } }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 19px/1.6 var(--body); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 48px max(16px, env(safe-area-inset-right, 0px)) 80px max(16px, env(safe-area-inset-left, 0px)); display: grid; gap: 64px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(36px, 6vw, 56px); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(27px, 4vw, 36px); font-weight: 800; letter-spacing: -0.01em; }
+h3 { font-size: 22px; font-weight: 600; }
+p { margin: 0; max-width: 64ch; }
+a { color: var(--blue); }
+a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+section, header { display: grid; gap: 20px; }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--pink); }
+.lead { font-size: 22px; color: var(--muted); }
+.safe { display: flex; gap: 12px; padding: 16px 18px; border-radius: 14px; background: var(--good-soft); }
+.safe b { color: var(--good); }
+video { width: 100%; height: auto; border-radius: 18px; background: #000; box-shadow: 0 14px 40px rgba(0,0,0,.14); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 16px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--blue); color: var(--surface); font: 800 24px/1 var(--display); }
+.steps li > div { display: grid; gap: 4px; min-width: 0; }
+.who { font-size: 14px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+figure { margin: 0; display: grid; gap: 14px; }
+figure a { display: block; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+figure img { display: block; width: 100%; height: auto; }
+figcaption { display: grid; gap: 4px; }
+figcaption p { color: var(--muted); }
+.shots { display: grid; gap: 48px; }
+.narrow a { max-width: 560px; }
+.rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.rule { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px; display: grid; gap: 6px; align-content: start; }
+.rule p { font-size: 18px; color: var(--muted); }
+.try { background: var(--blue-soft); border-radius: 18px; padding: 24px; }
+footer { font-size: 15px; color: var(--muted); }
+@media (max-width: 640px) { body { font-size: 18px; } .rules { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <p class="eyebrow">Xpress-Yourself Dance · New membership system</p>
+    <h1>How memberships work now</h1>
+    <p class="lead">A short guide for the Xpress-Yourself team: a 3-minute video, pictures of each screen, and the few rules behind it.</p>
+    <div class="safe" role="note"><span aria-hidden="true">✓</span><p><b>All of this is on the test website.</b> Nothing you do there changes your real website, your customers or any payments, and no emails go out.</p></div>
+  </header>
+
+  <section aria-labelledby="video">
+    <h2 id="video">Watch the 3-minute tour</h2>
+    <video controls preload="metadata" poster="video/poster.jpg">
+      <source src="video/walkthrough.mp4" type="video/mp4">
+      <a href="video/walkthrough.mp4">Download the video</a>
+    </video>
+    <p>The sound needs to be on. If the video won't play, <a href="video/walkthrough.mp4">open it on its own</a>.</p>
+  </section>
+
+  <section aria-labelledby="journey">
+    <h2 id="journey">A membership from start to finish</h2>
+    <ol class="steps">
+      <li><div><span class="who">Customer</span><h3>Buys a membership</h3><p>On the website, as now. They can buy several at once, one for each person.</p></div></li>
+      <li><div><span class="who">Customer</span><h3>Says who it's for</h3><p>At the checkout they pick a person on their account. If the person isn't listed, they choose "Someone not listed here".</p></div></li>
+      <li><div><span class="who">Your team</span><h3>Adds the person, if needed</h3><p>It appears under "Needs doing". You add the person and give them the membership. Their 12 months start on that day, so nobody loses any time.</p></div></li>
+      <li><div><span class="who">Customer</span><h3>Gets member prices</h3><p>Every class they book shows the member price for members and the normal price for everyone else.</p></div></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="pictures">
+    <h2 id="pictures">Each screen, step by step</h2>
+    <p>The pink numbers match the notes under each picture. Click a picture to see it bigger.</p>
+    <div class="shots">
+      <figure><figcaption><h3>1. The home page</h3><p>What you see when you log in. Anything that needs doing is at the top.</p></figcaption><a href="images/1-home.png"><img src="images/1-home.png" alt="The new home page, with Needs doing at the top, big buttons for each area, the menu on the left and the cog button in the bottom right corner." loading="lazy" width="1440" height="1353"></a></figure>
+      <figure class="narrow"><figcaption><h3>2. The cog button</h3><p>Bottom right of every page. It switches between this simpler view and the usual WordPress screens. Nothing has been taken away.</p></figcaption><a href="images/2-cog.png"><img src="images/2-cog.png" alt="Close-up of the round cog button in the bottom right corner." loading="lazy" width="840" height="681"></a></figure>
+      <figure><figcaption><h3>3. Finding a member</h3><p>Click Members, type a name or email, and open their household.</p></figcaption><a href="images/3-members.png"><img src="images/3-members.png" alt="The Members page with a search box, a list of households that need something doing, and search results." loading="lazy" width="1440" height="1353"></a></figure>
+      <figure><figcaption><h3>4. Giving a membership</h3><p>Choose who a waiting membership is for and click Give membership. Their 12 months start that day.</p></figcaption><a href="images/4-give-membership.png"><img src="images/4-give-membership.png" alt="A household page with a membership waiting for a name, a choice of people, and the Give membership button." loading="lazy" width="1440" height="1353"></a></figure>
+      <figure><figcaption><h3>5. Adding a person</h3><p>Type their full name, and fill in anything else you know.</p></figcaption><a href="images/5-add-person.png"><img src="images/5-add-person.png" alt="The Add a person form with name, date of birth, phone and emergency contact." loading="lazy" width="1440" height="1289"></a></figure>
+      <figure class="narrow"><figcaption><h3>6. What customers see at the checkout</h3><p>They tick who's coming, and each person gets the right price.</p></figcaption><a href="images/6-checkout.png"><img src="images/6-checkout.png" alt="The checkout box asking who is coming, with member and normal prices for each person." loading="lazy" width="760" height="1113"></a></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="rules">
+    <h2 id="rules">The rules in plain words</h2>
+    <div class="rules">
+      <div class="rule"><h3>12 months from the right day</h3><p>Named at the checkout: 12 months from payment. Named later by your team: 12 months from that day.</p></div>
+      <div class="rule"><h3>Covers the day of the class</h3><p>Members get the member price only if their membership still runs on the day of the class.</p></div>
+      <div class="rule"><h3>One discount at a time</h3><p>The member price doesn't add on top of a sale price or a discount code.</p></div>
+      <div class="rule"><h3>Customers can't add people</h3><p>New people are added by your team, as agreed. Customers choose "Someone not listed here".</p></div>
+    </div>
+  </section>
+
+  <section class="try" aria-labelledby="try">
+    <h2 id="try">Try it yourself</h2>
+    <p>Open the test website using the link in Dan's email, and log in with your usual username and password. To see the customer side, use the pretend customer login in the same email. Please only change pretend customers, whose names start with QA.</p>
+    <p>Anything confusing, wrong or missing? Just tell Dan in plain words. A screenshot helps if it's easy.</p>
+  </section>
+
+  <footer>Nothing goes live until you say so.</footer>
+</main>
+</body>
+</html>
